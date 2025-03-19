@@ -1,9 +1,14 @@
 <?php
 // Q1 変数と文字列
-
+$myname = '淺海莉絵';
+$name = '私の名前は'.$myname.'です。';
+echo $name;
 
 // Q2 四則演算
-
+$num = 5 * 4;
+echo $num;
+$num /= 2;
+echo $num;
 
 // Q3 日付操作
 
