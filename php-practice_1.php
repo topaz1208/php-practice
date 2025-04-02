@@ -32,20 +32,67 @@ echo $message."\n" ;
 $kanto = ['東京','神奈川','茨城','栃木','千葉','埼玉','群馬'];
 echo $kanto[3].'県と'.$kanto[4].'県は関東地方の都道府県です。';
 var_dump($kanto);
-// Q7 連想配列-1
 
+// Q7 連想配列-1
+$prefectures = [
+    '東京' => '新宿区',
+    '神奈川' => '横浜市',
+    '千葉' => '千葉市',
+    '埼玉' => 'さいたま市',
+    '栃木' => '宇都宮市',
+    '群馬' => '前橋市',
+    '茨城' => '水戸市'
+];
+foreach ($prefectures as $x => $y) {
+    echo $y."\n";
+};
 
 // Q8 連想配列-2
-
+foreach ($prefectures as $x => $y) {
+    if($y == 'さいたま市'){
+        echo $x.'県の県庁所在地は'.$y.'です。'."\n";
+    }
+};
 
 // Q9 連想配列-3
-
+$prefectures = [
+    '東京' => '新宿区',
+    '神奈川' => '横浜市',
+    '千葉' => '千葉市',
+    '埼玉' => 'さいたま市',
+    '栃木' => '宇都宮市',
+    '群馬' => '前橋市',
+    '茨城' => '水戸市'
+];
+$prefectures['愛知'] = '名古屋市';
+$prefectures['大阪'] = '大阪市';
+foreach($prefectures as $x => $y){
+    if($x !== '愛知' && $x !== '大阪'){
+        echo $x.'県の県庁所在地は'.$y.'です。'."\n";
+        }else{
+        echo $x.'は関東地方ではありません。'."\n";
+    };
+ };
 
 // Q10 関数-1
+function hello($name)
+{
+    echo $name.'さん、こんにちは。'."\n"; 
+}
 
+hello('金谷');
+hello('安藤');
 
 // Q11 関数-2
-
+$price = 1000;
+function calcTaxInPrice($price)
+{
+    
+    return $price * 1.1;
+    
+}
+$taxInPrice = calcTaxInPrice($price);
+echo $price.'円の商品の税込価格は'.$taxInPrice.'円です。';
 
 // Q12 関数とif文
 
