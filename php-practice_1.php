@@ -85,19 +85,53 @@ hello('安藤');
 
 // Q11 関数-2
 $price = 1000;
-function calcTaxInPrice($price)
+$i = 10;
+function calcTaxInPrice($price, $i)
 {
-    
-    return $price * 1.1;
-    
+    return $price + $price * ($i / 100);
 }
-$taxInPrice = calcTaxInPrice($price);
+$taxInPrice = calcTaxInPrice($price, $i);
 echo $price.'円の商品の税込価格は'.$taxInPrice.'円です。';
 
-// Q12 関数とif文
+// $price = 1000;
+// function calcTaxInPrice($price)
+// {
+//     return $price * 1.1;
+// }
+// $taxInPrice = calcTaxInPrice($price);
+// echo $price.'円の商品の税込価格は'.$taxInPrice.'円です。';
 
+
+
+// Q12 関数とif文
+function distinguishNum($number){
+    if($number % 2 == 0){
+        return $number.'は偶数です。'."\n";
+    }else{
+        return $number.'は奇数です。'."\n";
+    }
+}
+echo distinguishNum(11);
+echo distinguishNum(24);
 
 // Q13 関数とswitch文
-
+function evaluateGrade($i){
+    switch($i){
+        case 'A':
+        case 'B':
+            echo '合格です。'."\n";
+            break;
+        case 'C':
+            echo '合格ですが追加課題があります。'."\n";
+            break;
+        case 'D':
+            echo '不合格です。'."\n";
+            break;
+        default:
+            echo '判定不明です。講師に問い合わせてください。'."\n";
+    }
+}
+echo evaluateGrade('A');
+echo evaluateGrade('p');
 
 ?>
